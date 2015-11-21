@@ -1,0 +1,170 @@
+.block{width: 100%;}
+.input-field input[type=text],.input-field input[type=password]{
+    border-bottom: 1px solid #fff;
+}
+.input-field label {
+     color: #fff;
+}
+   /* label focus color */
+.input-field input[type=text]:focus + label {
+     color: #fff;
+}
+   /* label underline focus color */
+.input-field input[type=text]:focus {
+     border-bottom: 1px solid #fff;
+     box-shadow: 0 1px 0 0 #fff;
+}
+   /* valid color */
+.input-field input[type=text].valid {
+     border-bottom: 1px solid #fff;
+     box-shadow: 0 1px 0 0 #fff;
+}
+   /* invalid color */
+.input-field input[type=text].invalid {
+     border-bottom: 1px solid #fff;
+     box-shadow: 0 1px 0 0 #fff;
+}
+   /* icon prefix focus color */
+.input-field .prefix.active {
+     color: #fff;
+}
+.fa{
+  margin-right: 10px;
+}
+.cover-photo{
+  max-height: 300px;
+}
+.logo-login{
+  max-width: 250px;
+  max-height: 250px; 
+  margin-right: 0px;
+  margin-left: 25px;
+}
+.navbar-fixed, #fixer{
+  margin-bottom:-10px !important;
+}
+.header-img{
+  margin-top: :-10px !important;
+  background: black;
+}
+.menu-selection div a.btn{
+  width:100%;
+  margin-bottom: 7px;
+  text-align: left;
+  padding-left: 15px;
+}
+.cart .card-content .block{
+  margin-bottom: 8px;
+  margin-left: 0;
+  margin-right: 0;
+}
+.card-content .red{
+  margin-bottom: 0;
+}
+.cart .card-content h5{
+  text-align: center;
+  margin-top: 0;
+}
+.products div.col div.card div.card-content, .grocery div.col div.card div.card-content .cart div.col div.card div.card-content{
+  padding:0;
+}
+.delivery{
+  margin-top: 30px;
+}
+
+.btn-submit{
+  display:block;margin-left:auto;margin-right:auto;
+}
+
+@media only screen and (min-width : 300px) {
+  .shop-icon{
+    max-width:75px;
+  }
+  .btn-submit{
+    max-width:300px;
+  }
+  .img-icon{
+    max-width: 120px;
+  }
+  .header-adjust{
+    padding-top: 20px;
+  }
+  .btn-back{
+    line-height:75px;
+  }
+}
+@media only screen and (min-width : 601px) {
+  .shop-icon{
+    max-width:100px;
+  }
+  .img-icon{
+    max-width: 200px;
+  }
+  .header-adjust{
+    padding-top: 20px;
+  }
+  .btn-back{
+    line-height:85px;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .shop-icon{
+    max-width:150px;
+  }
+  .img-icon{
+    max-width: 200px; 
+  }
+  .header-adjust{
+    padding-top: 30px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .img-icon{
+    max-width: 215px; 
+  }
+  .header-adjust{
+    padding-top: 25px;
+  }
+}
+
+.img-profile{
+  z-index: 1;
+  position: absolute;
+  top:0;
+  left: 0;
+}
+.img-icon{
+  position:relative;
+  z-index: 5;
+  width: 100%;
+}
+#footer {
+  padding-top: 10px;
+  padding-bottom: 0px;
+  position:fixed;
+  bottom:0;
+  width:100%;
+}
+.card-image{
+  max-height: 350px;
+}
+.card-title{
+  max-width: 200px;
+  max-height: 200px;
+}
+.profile-header{
+  position: relative;
+  width:100%;
+  padding: 0;
+  padding-top: 10px;
+}
+.img-profile{
+  width:inherit;
+  height:100%;
+}
+.text-title{
+  position: relative;
+  z-index:5;
+}

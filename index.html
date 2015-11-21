@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+
+	<title>material</title>
+		
+		 <link href="css/material-font.css" rel="stylesheet">
+  	   	 <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+  		 <link rel="stylesheet" href="css/customize.css">
+  		 <link rel="stylesheet" href="css/font-awesome.css">
+  		 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+	</head>
+
+<body ng-app="myapp">
+
+
+  <div ng-view></div>
+  	<script type="text/javascript" src="app/js/jquery.min.js"></script>
+	<script type="text/javascript" src="app/js/materialize.min.js"></script>
+	<script type="text/javascript" src="app/js/angular.js"></script>
+	<script type="text/javascript" src="app/js/angular-route.js"></script>
+	<script type="text/javascript" src="app/app.js"></script> 
+	<script type="text/javascript" src="app/controller/main.js"></script>
+	<script type="text/javascript" src="app/controller/login.js"></script> 
+	<script type="text/javascript">
+	$(document).ready(function(){
+		$('.tooltipped').tooltip({delay: 50});
+	});
+	$(document).ready(function(){
+		$('.slider').slider({full_width: false});
+	});
+	</script>
+
+</body>
+</html>

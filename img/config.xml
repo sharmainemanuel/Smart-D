@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0" id="com.smartd.net" version="1.0">
+
+	<name>SMART-D</name>
+	<description>Smart D is a mobile application that let you shop online to your nearest grocery partners by just using Smart Money.</description>
+	<author>Team GC-CCS</author>
+	<gap:platforms>
+		<gap:platform name="android" />
+	</gap:platforms>
+	
+	<gap:plugin name="com.pushwoosh.plugins.pushwoosh" source="plugins.cordova.io" />
+	<icon src="img/icons/smartd_96.png" />
+	<icon src="img/icons/smartd_36.png" gap:platform="android" gap:qualifier="ldpi" />
+	<icon src="img/icons/smartd_48.png" gap:platform="android" gap:qualifier="mdpi" />
+	<icon src="img/icons/smartd_72.png" gap:platform="android" gap:qualifier="hdpi" />
+	<icon src="img/icons/smartd_96.png" gap:platform="android" gap:qualifier="xhdpi" />
+	
+	<preference name="phonegap-version" value="3.7.0" />
+	<preference name="permissions" value="none"/>
+	<preference name="orientation" value="default" />
+	<preference name="fullscreen" value="true" />
+	<preference name="target-device" value="universal" />
+	<preference name="auto-hide-splash-screen" value="true" />
+
+	<access origin="*" subdomains="true" />
+	<access uri="*" subdomains="true" />
+	<access origin="*"/> <!-- allow all pages, use for development -->
+	<access origin="*.pushwoosh.com"/> <!-- allow pushwoosh service -->
+
+        <feature name="http://api.phonegap.com/1.0/network" />
+        <feature name="http://api.phonegap.com/1.0/camera" />
+        <feature name="http://api.phonegap.com/1.0/notification" />
+        <feature name="http://api.phonegap.com/1.0/geolocation" />
+        <feature name="http://api.phonegap.com/1.0/media" />
+        <feature name="http://api.phonegap.com/1.0/contacts" />
+        <feature name="http://api.phonegap.com/1.0/file" />
+        <feature name="http://api.phonegap.com/1.0/battery" />
+        <feature name="http://api.phonegap.com/1.0/device" />
+	
+	<gap:plugin name="org.apache.cordova.battery-status" />
+        <gap:plugin name="org.apache.cordova.camera" />
+        <gap:plugin name="org.apache.cordova.media" />
+        <gap:plugin name="org.apache.cordova.media-capture" />
+        <gap:plugin name="org.apache.cordova.console" />
+        <gap:plugin name="org.apache.cordova.contacts" />
+        <gap:plugin name="org.apache.cordova.device" />
+        <gap:plugin name="org.apache.cordova.device-motion" />
+        <gap:plugin name="org.apache.cordova.device-orientation" />
+        <gap:plugin name="org.apache.cordova.dialogs" />
+        <gap:plugin name="org.apache.cordova.file" />
+        <gap:plugin name="org.apache.cordova.file-transfer" />
+        <gap:plugin name="org.apache.cordova.geolocation" />
+        <gap:plugin name="org.apache.cordova.globalization" />
+        <gap:plugin name="org.apache.cordova.inappbrowser" />
+        <gap:plugin name="org.apache.cordova.media" />
+        <gap:plugin name="org.apache.cordova.network-information" />
+        <gap:plugin name="org.apache.cordova.splashscreen" />
+        <gap:plugin name="org.apache.cordova.vibration" />
+	<gap:plugin name="de.appplant.cordova.plugin.local-notification" version="0.8.1" />
+	<gap:plugin name="com.telerik.plugins.nativepagetransitions" version="0.2.2" />
+	
+	<preference name="android-minSdkVersion" value="14" />
+</widget>
