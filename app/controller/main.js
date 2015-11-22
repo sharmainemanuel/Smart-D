@@ -1,13 +1,9 @@
-app.controller("MainController",function($scope,$http){
-	$scope.name = "Gerald";
-	var onUserComplete = function(response){
-		$scope.user = response.data;
-		//alert($scope.user);
+app.controller("MainController",function($rootScope,$scope,$window,$location){
+	$rootScope.last ="Austira";
+	$rootScope.go = function(path){
+		$location.path(path);
 	}
-
-	var onError = function(reason){
-		$scope.error = "Error fetching the data. ";
+	$rootScope.back = function(){
+		$window.history.back();
 	}
-
-	$http.post("http://localhost/practice/insert.php",{names:20}).then(onUserComplete, onError);
 });

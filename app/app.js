@@ -3,21 +3,20 @@ var app = angular.module("myapp",["ngRoute"]);
 	app.config(function($routeProvider,$locationProvider){
 		$routeProvider
 		.when("/", {
-			templateUrl: "views/main.html",
-			controller: "MainController"
+			templateUrl: "views/home.html",
+			controller: "HomeController"
+		})
+		.when("/shops" , {
+			templateUrl: "views/shops.html",
+			controller: "ShopController"
 		})
 		.when("/about", {
-			templateUrl: "views/about.html"
+			templateUrl: "views/about.html",
+			controller: "AboutController"
 		})
-		.when("/cart", {
-			templateUrl: "views/cart.html"
-		})
-		.when("/grocer" , {
-			templateUrl: "views/grocer.html"
-		})
-		.when("/login", {
-			templateUrl: "views/login.html",
-			controller: "LoginController"
-		})
-		.otherwise({redirectTo:"/about"});
+		.when("/carts", {
+			templateUrl: "views/cart.html",
+			controller: "CartController"
+		});
+		//.otherwise({redirectTo:"/about"});
 	});
