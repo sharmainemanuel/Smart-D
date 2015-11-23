@@ -17,6 +17,18 @@ var app = angular.module("myapp",["ngRoute"]);
 		.when("/carts", {
 			templateUrl: "views/cart.html",
 			controller: "CartController"
+		})
+		.when("/category/:shopping", {
+			templateUrl: "views/category.html",
+			controller: "CategoryController"
+		})
+		.when("/product/:categ", {
+			templateUrl: "views/product.html",
+			controller: "ProductController"
+		})
+		.when("/login", {
+			templateUrl: "views/login.html",
+			controller: "LoginController"
 		});
 		//.otherwise({redirectTo:"/about"});
 	});
