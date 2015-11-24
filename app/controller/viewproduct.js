@@ -42,14 +42,16 @@ app.controller("ViewProduct", function($rootScope,$scope,$http,$location,$routeP
 	}
 
 	var constructJSON = function(details){
-		var newfile = '{"productid":"' +  details[0].productid + '","productname":"' +  details[0].productname + '",';
-		newfile += '"ptype":"' +  details[0].ptype + '","pqty":"' +  $scope.qty + '","pprice":"' +  ($scope.qty * details[0].pprice) + '"}';
+		var newfile = '[{"productid":"' +  details[0].productid + '","productname":"' +  details[0].productname + '",';
+		newfile += '"ptype":"' +  details[0].ptype + '","pqty":"' +  $scope.qty + '","pprice":"' +  ($scope.qty * details[0].pprice) + '"}]';
 		return newfile;
 	}
 
 	var appendIt = function(xstr){
-		var getstr = constructJSON(profile); 
-		return "[" + xstr + "," + getstr + "]";
+		var temp = xstr.substring(1,xstr.length-1);
+		var getstr = constructJSON(profile);
+		var temp2 = getstr.substring(1,getstr.length-1); 
+		return "[" + temp + "," + temp2 + "]";
 	}
 
 	var onUserComplete = function(response){
@@ -63,7 +65,7 @@ app.controller("ViewProduct", function($rootScope,$scope,$http,$location,$routeP
 	}
 
 	$http({method: "post",
-    	url: "http://192.168.11.119/practice/view_product.php",
+    	url: "http://iligtas.ph/smartd/view_product.php",
     	data: {"productid":pid},
     	headers: { 'Content-Type': 'application/x-www-form-urlencoded' }
     }).then(onUserComplete);

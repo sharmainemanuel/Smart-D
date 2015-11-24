@@ -1,7 +1,7 @@
 <div class="navbar-fixed" id="fixer">
     <nav class="light-blue lighten-1 resposive-img">
       <a href="" class="brand-logo center"><span class="brand-logo1">S</span><span class="brand-logo2">mart</span><span class="brand-logo3">D</span></a>
-      <a href="" class="brand-logo4 left"><span class="fa fa-search fa-2x"></span></a>
+      <a href="/#/login" class="brand-logo4 right"><span class="fa fa-sign-out fa-lg"></span></a><a href="" class="brand-logo5 right"><span class="fa fa-search fa-lg" style="padding-left:13px;"></span></a>
      </nav>
 </div>
 
@@ -14,31 +14,44 @@
 </div>
 
 <div class="row">
-  <div class="col s6 center-align">
+  <div class="col s4 center-align">
     <div class="card-panel red lighten-1 white-text" ng-click="go('/shops')">
       <span class="fa fa-building fa-3x" style="margin-left:15px;"></span>
       <h5>Shop</h5>
     </div>
   </div>
-  <div class="col s6">
-    <div class="card-panel center-align yellow light-1 white-text" ng-click="go('/carts')">
+  <div class="col s4">
+    <div class="card-panel center-align green accent-3 white-text" ng-click="go('/carts')">
       <span class="fa fa-cart-arrow-down fa-3x" style="margin-left:5px;"></span>
       <h5>Cart</h5>
     </div>
   </div>
-  <div class="col s6">
-    <div class="card-panel center-align cyan accent-3 white-text">
-      <span class="fa fa-cogs fa-3x" style="margin-left:5px;"></span>
-      <h5>Settings</h5>
+  <div class="col s4">
+    <div class="card-panel center-align blue lighten-1 white-text">
+      <span class="fa fa-list fa-3x" style="margin-left:8px;"></span>
+      <h5>Order</h5>
     </div>
   </div>
-  <div class="col s6">
-    <div class="card-panel center-align green accent-3 white-text" ng-click="go('/about')">
+  <div class="col s4">
+    <div class="card-panel center-align yellow accent-4 white-text" style="height:128px" ng-click="go('/about')">
+      <span class="fa fa-cogs fa-3x" style="margin-left:5px;"></span>
+      <h6 style="margin-top:15px">Settings</h6>
+    </div>
+  </div>
+  <div class="col s4">
+    <div class="card-panel center-align amber darken-1 white-text" ng-click="go('/about')">
+      <span class="fa fa-question fa-3x" style="margin-left:15px;"></span>
+      <h5>Help</h5>
+    </div>
+  </div>
+  <div class="col s4">
+    <div class="card-panel center-align purple accent-1 white-text" ng-click="go('/about')">
       <span class="fa fa-info-circle fa-3x" style="margin-left:15px;"></span>
       <h5>About</h5>
     </div>
   </div>
 </div>
+
 
 <!--
 <div class="row">

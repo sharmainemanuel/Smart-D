@@ -33,6 +33,10 @@ var app = angular.module("myapp",["ngRoute"]);
 		.when("/viewproduct/:idproduct", {
 			templateUrl: "views/viewproduct.html",
 			controller: "ViewProduct"
+		})
+		.when("/checkout", {
+			templateUrl: "views/checkout.html",
+			controller: "CheckoutController"
 		});
 		//.otherwise({redirectTo:"/about"});
 	});

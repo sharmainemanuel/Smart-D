@@ -6,34 +6,37 @@
      </nav>
 </div>
 
-      <div class="row">
-        <div class="col s6 m4">
-        <div class="card">
-            <div class="row">
-              <div class="col s12">
-                <div class="card-image">
-                  <img src="img#">
-                </div>
-              </div>
-            <div class="col s12 m6">
+  <div class="row">
+    <div class="col s6 m4" ng-repeat="y in items">
+      <div class="card" >
+        <div class="row" >
+          <div class="col s12">
+          <a href="" class="fa fa-times fa-2x" style="position: absolute;right: 10px;width: 3px;padding: 10px;"></a>
+            <div class="card-image">
+              <img src="img#" style="position:relative;padding:5px;padding-top:50px;max-width:300px;">
+            </div>
+          </div>
+          <div class="col s12 m6">
             <div class="card-content">
-              <p>{{product[0].productname}}</p>
-              <p>{{product[0].pprice}}</p>
-              </div>
-              
-              </div>
+              <p>{{y.productname}}</p>
+              <p>{{y.pqty}}</p>
+              <p>{{y.pprice}}</p>
             </div>
-        
-            <div class="card-action">
-              <ul class="pagination">
-                <li><a href="" class="fa fa-times"><i ></i></a></li>
-                <li><input type="number" style="height: 20px;position: relative;border: 2px solid #cdcdcd;border-color: rgba(0,0,0,.14);background-color: AliceBlue;font-size:22px;height:30px;max-width:100px;" min="0" max="10" value="{{qty}}">
-                </li><li><a ng-click="minus()" class="btn-floating red lighten-3 waves-effect waves-red btn-flat"><i class="fa fa-minus fa-lg"></i></a></li>
-                <li><a ng-click="add()" class="btn-floating green lighten-3 waves-effect waves-green btn-flat"><i class="fa fa-plus fa-lg"></i></a></li>
-                
-              </ul>
-            </div>
-           </div>
-         </div>
-       </div>
-</div> 
+          </div>
+        </div>
+
+      <div class="card-action">
+
+        <ul class="pagination">
+          <li style="position:relative;padding:5px;padding-top:50px;max-width:300px;"><a ng-click="minus()" class="btn-floating red lighten-3 waves-effect waves-red btn-flat"><i class="fa fa-minus fa-lg"></i></a></li>
+          <li><a ng-click="add()" class="btn-floating green lighten-3 waves-effect waves-green btn-flat"><i class="fa fa-plus fa-lg"></i></a></li>
+        </ul>
+      </div>
+      </div>
+    </div>
+  </div>
+   <div class="footer" style="padding-top: 10px;padding-bottom: 0px;position:fixed;bottom:0px;width:100%;" ng-click="go('/checkout')">
+      <nav class="light-blue lighten-1 resposive-img waves-effect waves-light">
+        <a href="/#/checkout"class="brand-logo center">Check-out<span class="fa fa-sign-out"></span></a>
+      </nav>
+    </div>
