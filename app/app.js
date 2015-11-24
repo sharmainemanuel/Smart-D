@@ -29,6 +29,10 @@ var app = angular.module("myapp",["ngRoute"]);
 		.when("/login", {
 			templateUrl: "views/login.html",
 			controller: "LoginController"
+		})
+		.when("/viewproduct/:idproduct", {
+			templateUrl: "views/viewproduct.html",
+			controller: "ViewProduct"
 		});
 		//.otherwise({redirectTo:"/about"});
 	});

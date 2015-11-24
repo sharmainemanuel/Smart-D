@@ -1,0 +1,42 @@
+<div class="row">
+
+<div class="navbar-fixed" id="fixer">
+    <nav class="light-blue lighten-1 resposive-img">
+      <a href="#" class="brand-logo center"><span class="brand-logo1">Cart</span>
+      <a ng-click="back()" class="btn-back"><span class="fa fa-angle-left fa-3x"></span></a>
+      <a href="#" class="brand-logo2 right"><span class="fa fa-search fa-2x"></span></a>
+     </nav>
+</div>
+  
+  <div class="col s12 m12">
+        <div class="card">
+            <div class="row">
+              <div class="col s12 m6">
+                <div class="card-image">
+                  <img src="img#" style="max-width: 300px;">
+                </div>
+              </div>
+            <div class="col s12 m6">
+            <div class="card-content">
+              <p>{{product[0].productname}}</p>
+              <p>{{product[0].pprice}}</p>
+              </div>
+              <ul class="pagination">
+                <li><a ng-click="minus()" class="btn-floating red lighten-3 waves-effect waves-red btn-flat"><i class="fa fa-minus"></i></a></li>
+                <li><input type="number" style="height: 20px;position: relative;border: 2px solid #cdcdcd;border-color: rgba(0,0,0,.14);background-color: AliceBlue;font-size:22px;height:30px;max-width:100px;" min="0" max="10" value="{{qty}}"></li>
+                <li><a ng-click="add()" class="btn-floating green lighten-3 waves-effect waves-green btn-flat"><i class="fa fa-plus"></i></a></li>
+                </ul>
+              </div>
+            </div>
+        
+            <div class="card-action">
+              <p>Description</p>
+            </div>
+           </div>
+         </div>
+            <div ng-click="addToCart()" class="footer" style="padding-top: 10px;padding-bottom: 0px;position:fixed;bottom:0px;width:100%;">
+            <nav class="light-blue lighten-1 resposive-img waves-effect waves-light">
+              <a class="brand-logo center"><span class="fa fa-cart-plus"></span>Add to Cart</a>
+            </nav>
+          </div>
+</div>

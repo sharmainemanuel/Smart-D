@@ -6,22 +6,34 @@
      </nav>
 </div>
 
-<div id="footer">
-        <ul class="tabs">
-          <li class="tab col s3"><a class="active" href="#/cart#test1">my cart</a></li>
-          <li class="tab col s3"><a href="#/cart#test2">asdasdsa</a></li>
-          <li class="tab col s3"><a href="#/cart#test3">dry goods</a></li>
-          <li class="tab col s3"><a href="#/cart#test4">to buy</a></li>
-        </ul>
-</div>
-
-<div class="fixed-action-btn" style="bottom: 45px; right: 24px;">
-    <a class="btn-floating btn-large red">
-      <i class="fa fa-cart-plus"></i>
-    </a>
-    <ul>
-      <li><a class="btn-floating green"><i class="fa fa-plus"></i></a></li>
-      <li><a class="btn-floating red"><i class="fa fa-minus"></i></i></a></li>
-    </ul>
-  </div>
+      <div class="row">
+        <div class="col s6 m4">
+        <div class="card">
+            <div class="row">
+              <div class="col s12">
+                <div class="card-image">
+                  <img src="img#">
+                </div>
+              </div>
+            <div class="col s12 m6">
+            <div class="card-content">
+              <p>{{product[0].productname}}</p>
+              <p>{{product[0].pprice}}</p>
+              </div>
+              
+              </div>
+            </div>
+        
+            <div class="card-action">
+              <ul class="pagination">
+                <li><a href="" class="fa fa-times"><i ></i></a></li>
+                <li><input type="number" style="height: 20px;position: relative;border: 2px solid #cdcdcd;border-color: rgba(0,0,0,.14);background-color: AliceBlue;font-size:22px;height:30px;max-width:100px;" min="0" max="10" value="{{qty}}">
+                </li><li><a ng-click="minus()" class="btn-floating red lighten-3 waves-effect waves-red btn-flat"><i class="fa fa-minus fa-lg"></i></a></li>
+                <li><a ng-click="add()" class="btn-floating green lighten-3 waves-effect waves-green btn-flat"><i class="fa fa-plus fa-lg"></i></a></li>
+                
+              </ul>
+            </div>
+           </div>
+         </div>
+       </div>
 </div> 

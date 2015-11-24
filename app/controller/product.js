@@ -1,7 +1,7 @@
 app.controller("ProductController",function($scope,$http,$window,$rootScope,$routeParams){
 	var filt = $routeParams.categ;
 	var onUserComplete = function(response){
-		$scope.product = response.data;
+		$scope.products = response.data;
 	}
 
 	var onError = function(reason){
@@ -9,7 +9,7 @@ app.controller("ProductController",function($scope,$http,$window,$rootScope,$rou
 	}
 
 	$http({method: "post",
-    	url: "http://localhost/practice/view_products.php",
+    	url: "http://192.168.11.119/practice/view_products.php",
     	data: {"category":filt},
     	headers: { 'Content-Type': 'application/x-www-form-urlencoded' }
     }).then(onUserComplete);

@@ -1,4 +1,5 @@
 .block{width: 100%;}
+.normal-text{ border: 1px solid black }
 .input-field input[type=text],.input-field input[type=password]{
     border-bottom: 1px solid #fff;
 }
