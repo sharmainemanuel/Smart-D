@@ -12,11 +12,24 @@
               <input id="first_name" type="password" class="validate" ng-model="password" required/>
               <label for="last_name">Password</label>
             </div>
-            <button class="btn waves-effect waves-light" style="display:block;margin-left:auto;margin-right:auto;background:#E0024D" type="submit" name="action">Submit
-                <i class="fa fa-paper-plane"></i>
+            
+            <button ng-click="submitCustomer()" class="btn waves-effect waves-light" style="display:block;margin-left:auto;margin-right:auto;background:#E0024D" type="submit" name="action">customer
+                <i class="fa fa-sign-in"></i>
             </button>
+            <div class="col s12 center" style="margin:5px;">
+              <span>or</span>
             </div>
-        </form>
+            <div class="col s12 center" style="margin:5px;text-decoration:underline;">
+              <span>sign-in</span>
+            </div>
+
+              <div class="col s12">
+              <button ng-click="submitDelivery()" class="btn waves-effect waves-light" style="display:block;margin-left:auto;margin-right:auto;background:#E0024D" type="submit" name="action">Delivery Crew
+                <i class="fa fa-sign-in"></i>
+            </button>
+              </div>
+            
+            </form>
 	</div>
 </div>
 </div>

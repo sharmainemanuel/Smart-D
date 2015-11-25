@@ -2378,6 +2378,7 @@ span.badge {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
+
   span.badge.new {
     font-weight: 300;
     font-size: 0.8rem;
@@ -2385,12 +2386,49 @@ span.badge {
     background-color: #26a69a;
     border-radius: 2px; }
   span.badge.new:after {
-    content: " new"; }
+    content: ""; }
 
+    span.badge.canceled {
+    font-weight: 300;
+    font-size: 0.8rem;
+    color: #fff;
+    background-color: red;
+    border-radius: 2px; }
+  span.badge.canceled:after {
+    content: "Canceled"; }
+
+    span.badge.delivered {
+    font-weight: 300;
+    font-size: 0.8rem;
+    color: #fff;
+    background-color: green;
+    border-radius: 2px; }
+  span.badge.delivered:after {
+    content: "Delivered"; }
+
+    span.badge.inprogress {
+    font-weight: 300;
+    font-size: 0.8rem;
+    color: #fff;
+    background-color: orange;
+    border-radius: 2px; }
+  span.badge.inprogress:after {
+    content: "In Progress"; }
+
+    span.badge.pending {
+    font-weight: 300;
+    font-size: 0.8rem;
+    color: #fff;
+    background-color: orange;
+    border-radius: 2px; }
+  span.badge.pending:after {
+    content: "Pending..."; }
+    
 nav ul a span.badge {
   position: static;
   margin-left: 4px;
   line-height: 0; }
+
 
 .video-container {
   position: relative;

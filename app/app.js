@@ -37,6 +37,22 @@ var app = angular.module("myapp",["ngRoute"]);
 		.when("/checkout", {
 			templateUrl: "views/checkout.html",
 			controller: "CheckoutController"
+		})
+		.when("/wishlist", {
+			templateUrl: "views/wishlist.html",
+			controller: "WishlistController"
+		})
+		.when("/deliveryhome", {
+			templateUrl: "views/deliveryhome.html",
+			controller: "DeliveryhomeController"
+		})
+		.when("/orders", {
+			templateUrl: "views/orders.html",
+			controller: "OrdersController"
+		})
+		.when("/orderlist", {
+			templateUrl: "views/orderlist.html",
+			controller: "OrderlistController"
 		});
 		//.otherwise({redirectTo:"/about"});
 	});

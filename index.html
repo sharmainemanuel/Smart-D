@@ -5,7 +5,7 @@
 	<title>material</title>
 		
 		 <link href="css/material-font.css" rel="stylesheet">
-  	   	 <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+  	   	 <link type="text/css" rel="stylesheet" href="css/materialize.css"  media="screen,projection"/>
   		 <link rel="stylesheet" href="css/customize.css">
   		 <link rel="stylesheet" href="css/font-awesome.css">
   		 <link rel="stylesheet" href="css/animate.min.css">
@@ -64,12 +64,18 @@
   <script type="text/javascript" src="app/controller/login.js"></script>
   <script type="text/javascript" src="app/controller/viewproduct.js"></script>
   <script type="text/javascript" src="app/controller/checkout.js"></script>
+  <script type="text/javascript" src="app/controller/deliveryhome.js"></script>
+  <script type="text/javascript" src="app/controller/orders.js"></script>
+  <script type="text/javascript" src="app/controller/orderlist.js"></script>
 	<script type="text/javascript">
 	$(document).ready(function(){
 		$('.tooltipped').tooltip({delay: 50});
   });
 	$(document).ready(function(){
     $('.modal-trigger').leanModal();
+  });
+  $(document).ready(function(){
+    $('ul.tabs').tabs();
   });
 
 	</script>

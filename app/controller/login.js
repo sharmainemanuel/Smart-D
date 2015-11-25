@@ -1,15 +1,35 @@
 app.controller("LoginController",function($rootScope,$scope,$window,$location,$http){
-	$scope.submit = function(){
+	$scope.submitCustomer = function(){
 		var user = $scope.username;
 		var pass = $scope.password;
-		$http.post("http://iligtas.ph/smartd/login.php",{username:user,password:pass}).then(onUserComplete, onError);
+		$http.post("http://iligtas.ph/smartd/login.php",{username:user,password:pass}).then(onUserCompleteUser, onError);
 	};
-	var onUserComplete = function(response){
+
+	$scope.submitDelivery = function(){
+		var user = $scope.username;
+		var pass = $scope.password;
+		$http.post("http://iligtas.ph/smartd/login2.php",{username:user,password:pass}).then(onUserCompleteDelivery, onError);
+	};
+
+	var onUserCompleteUser = function(response){
 		$scope.user = response.data;
-		alert($scope.user);
+		if($scope.user == "false"){
+			alert("mali");
+		}else{
+			localStorage.setItem("user", JSON.stringify($scope.user));
+			$location.path("/");
+		}	
+	}
+	var onUserCompleteDelivery = function(response){
+		$scope.user = response.data;
+		if($scope.user == "false"){
+			alert("mali");
+		}else{
+			localStorage.setItem("delivery", JSON.stringify($scope.user));
+			$location.path("/deliveryhome");
+		}	
 	}
 	var onError = function(reason){
 		$scope.error = "Error fetching the data. ";
-		alert($scope.error);
 	}
 });

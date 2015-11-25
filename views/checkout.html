@@ -13,7 +13,7 @@
           <label for="first_name" style="color:grey;">House No.</label>
         </div>
         <div class="input-field col s12 m6">
-          <input id="first_name" type="text" class="validate" style="border-bottom-style:solid;border-color:grey;">
+          <input id="first_name" type="text" class="validate" ng-model="addres" style="border-bottom-style:solid;border-color:grey;">
           <label for="first_name" style="color:grey;">Street</label>
         </div>
         <div class="input-field col s12 m6">
@@ -32,11 +32,21 @@
           <input id="first_name" type="password" class="validate" style="border-bottom-style:solid;border-color:grey;">
           <label for="first_name" style="color:grey;">Smart Money Account</label>
         </div>
-        <div class="col s12" ng-click="go('/checkout')">
-        <a href="" onclick="Materialize.toast('Your transaction is on process.', 2000, 'rounded')" class="brand-logo center waves-effect waves-light btn"> <span class="fa fa-paper-plane-o">Submit</span></a>
-    </div>
+        <div class="col s12" ng-click="checkout()">
+          <a class="brand-logo center waves-effect waves-light btn"> <span class="fa fa-paper-plane-o">Submit</span></a>
+        </div>
         </div>
       </form>
   </div>
 
    
+<!-- Modal Structure -->
+<div id="modal1" class="modal">
+  <div class="modal-content">
+    <h4>Order Success!</h4>
+    <p>Your transaction is on process. Please wait for your purchased products to be delivered</p>
+  </div>
+  <div class="modal-footer">
+    <a ng-click="goToHome()" class=" modal-action modal-close waves-effect waves-green btn-flat">Close</a>
+  </div>
+</div>

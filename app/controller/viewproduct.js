@@ -16,16 +16,32 @@ app.controller("ViewProduct", function($rootScope,$scope,$http,$location,$routeP
 		$scope.qty += 1;	
 	}
 
+	var getItems = function(){
+		var prod = JSON.parse(localStorage.getItem("product")) || [] ;
+		return prod;
+	}
+
+	var subtract = function(strprofile){
+		strprofile[0].pqty = $scope.qty;
+		strprofile[0].pprice = $scope.qty * strprofile[0].pprice;
+		strprofile[0].customerid = JSON.parse(localStorage.getItem("user")).userid;
+		var mystr = JSON.stringify(strprofile);
+		return JSON.parse(mystr.substring(1,mystr.length-1));
+	}
+
 	$scope.addToCart = function(){
 		if(typeof(Storage) !== "undefined") {
 	    // Code for localStorage/sessionStorage.
-		    if (localStorage.getItem("product") === null) {
-		    	localStorage.setItem("product", constructJSON(profile));
-		   	}
-		   	else{
-		   		var temp = localStorage.getItem("product");
-		   		localStorage.setItem("product", appendIt(temp));
-			} 
+	    	if(checkDuplicate(profile[0].productid)){
+	    		var items = getItems();
+	    		var replace = subtract(profile); 
+			    items.push(replace);
+			    localStorage.setItem("product",JSON.stringify(items));
+	    	}
+	    	else{
+	    		alert("may kapareha");
+	    	}
+
 		}
 		else {
 		    // Sorry! No Web Storage support..
@@ -33,7 +49,7 @@ app.controller("ViewProduct", function($rootScope,$scope,$http,$location,$routeP
 	}
 
 	var deleteItem = function(){
-		var json = JSON.parse(localStorage.getItem("product"));
+		var json = getItems();
 		for (i=0;i<json.length;i++){
 			if (json[i].productid == '3') json.splice(i,1);
 		}
@@ -41,18 +57,18 @@ app.controller("ViewProduct", function($rootScope,$scope,$http,$location,$routeP
 		localStorage.setItem("product",JSON.stringify(json));
 	}
 
-	var constructJSON = function(details){
-		var newfile = '[{"productid":"' +  details[0].productid + '","productname":"' +  details[0].productname + '",';
-		newfile += '"ptype":"' +  details[0].ptype + '","pqty":"' +  $scope.qty + '","pprice":"' +  ($scope.qty * details[0].pprice) + '"}]';
-		return newfile;
+	var checkDuplicate = function(id){
+		var hasDuplicate = false;
+		var json = getItems();
+		for (i=0;i<json.length;i++){
+			if (json[i].productid == id){
+				return false;
+			}
+		}
+
+		return true;	
 	}
 
-	var appendIt = function(xstr){
-		var temp = xstr.substring(1,xstr.length-1);
-		var getstr = constructJSON(profile);
-		var temp2 = getstr.substring(1,getstr.length-1); 
-		return "[" + temp + "," + temp2 + "]";
-	}
 
 	var onUserComplete = function(response){
 		$scope.product = response.data;
@@ -69,4 +85,5 @@ app.controller("ViewProduct", function($rootScope,$scope,$http,$location,$routeP
     	data: {"productid":pid},
     	headers: { 'Content-Type': 'application/x-www-form-urlencoded' }
     }).then(onUserComplete);
+
 });

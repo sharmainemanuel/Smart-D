@@ -23,6 +23,7 @@
       <div class="col s6 m3" ng-repeat="x in products">
       	<div class="card">
 	        <div class="card-image">
+            <img src="http://iligtas.ph/{{x.pimage}}">
 	        </div>
 	        <div class="card-content">
 	          <p>{{x.productname}}</p>
@@ -30,6 +31,7 @@
 	        </div>
 	        <div class="card-action">
 	          <a href="/#/viewproduct/{{x.productid}}">View</a>
+            <span class="fa fa-heart-o fa-2x right"></span>
 	        </div>
       	</div>
       </div>

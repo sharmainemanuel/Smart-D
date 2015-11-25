@@ -8,17 +8,14 @@ app.controller("CartController",function($rootScope,$scope,$window,$location,$ro
 		$route.reload();
 	}
 
-	$scope.checkOut = function(){
-		var myjson = JSON.parse(localStorage.getItem("product"));
-
-		$.ajax({
-            url: 'http://iligtas.ph/smartd/checkout.php',
-            type: 'post',
-            dataType: 'json',
-            success: function (data) {
-            	alert("success");
-            },
-            data: myjson
-        });	
+	$scope.deleteItem = function(id){
+		var json = JSON.parse(localStorage.getItem("product"));
+		if(json.length==1){localStorage.removeItem("product"); $route.reload(); return;}
+		for (i=0;i<json.length;i++){
+			if (json[i].productid == id) json.splice(i,1);
+		}
+		
+		localStorage.setItem("product",JSON.stringify(json));
+		$route.reload();
 	}
 });
