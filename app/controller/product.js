@@ -15,5 +15,9 @@ app.controller("ProductController",function($scope,$http,$window,$rootScope,$rou
     	data: {"category":filt},
     	headers: { 'Content-Type': 'application/x-www-form-urlencoded' }
     }).then(onUserComplete);
-
+	/*$http({method: "post",
+    	url: "http://localhost/practice/view_products.php",
+    	data: {"category":filt},
+    	headers: { 'Content-Type': 'application/x-www-form-urlencoded' }
+    }).then(onUserComplete);*/
 });

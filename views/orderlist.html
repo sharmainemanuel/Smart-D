@@ -6,11 +6,10 @@
      </nav>
 </div>
 
-<div class="collection">
-    <a  class="collection-item">Bulalo<br><span>P 20.00</span></a>
-    <a  class="collection-item">Bulalo<br><span>P 20.00</span></a>
-    <a  class="collection-item">Bulalo<br><span>P 20.00</span></a>
-  </div>
+<div class="collection" >
+    <a  class="collection-item" ng-repeat="z in orders">{{z.p_id}}<br><span>{{z.p_name}}</span><span ng-if="z.p_type==0" class="inprogress badge"></span>
+    <span ng-if="z.p_type==1" class="delivered badge"></span></a>
+</div>
 
   <div class="footer" style="padding-top: 10px;padding-bottom: 0px;position:fixed;bottom:0px;width:100%;">
             <nav class="light-blue lighten-1 resposive-img waves-effect waves-light">

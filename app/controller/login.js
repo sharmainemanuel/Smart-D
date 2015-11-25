@@ -17,7 +17,7 @@ app.controller("LoginController",function($rootScope,$scope,$window,$location,$h
 			alert("mali");
 		}else{
 			localStorage.setItem("user", JSON.stringify($scope.user));
-			$location.path("/");
+			$location.path("/home");
 		}	
 	}
 	var onUserCompleteDelivery = function(response){

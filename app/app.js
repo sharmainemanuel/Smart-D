@@ -3,8 +3,8 @@ var app = angular.module("myapp",["ngRoute"]);
 	app.config(function($routeProvider,$locationProvider){
 		$routeProvider
 		.when("/", {
-			templateUrl: "views/home.html",
-			controller: "HomeController"
+			templateUrl: "views/login.html",
+			controller: "LoginController"
 		})
 		.when("/shops" , {
 			templateUrl: "views/shops.html",
@@ -26,9 +26,9 @@ var app = angular.module("myapp",["ngRoute"]);
 			templateUrl: "views/product.html",
 			controller: "ProductController"
 		})
-		.when("/login", {
-			templateUrl: "views/login.html",
-			controller: "LoginController"
+		.when("/home", {
+			templateUrl: "views/home.html",
+			controller: "HomeController"
 		})
 		.when("/viewproduct/:idproduct", {
 			templateUrl: "views/viewproduct.html",

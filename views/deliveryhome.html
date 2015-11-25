@@ -1,9 +1,7 @@
 <div class="navbar-fixed" id="fixer">
     <nav class="light-blue lighten-1 resposive-img">
-     
-  	</a>
       <a href="#" class="brand-logo center"><span class="brand-logo1">Delivery</span></a>
-      <a href="#" class="brand-logo4 right"><span class="fa fa-search fa-2x"></span></a>
+      <a ng-click="logout()" class="brand-logo4 right"><span class="fa fa-sign-out fa-lg"></span></a><a href="" class="brand-logo5 right"><span class="fa fa-search fa-lg" style="padding-left:13px;"></span></a>
      </nav>
 </div>
 
@@ -16,9 +14,8 @@
 </div>
 
 <div class="collection">
-    <a  class="collection-item">Marc Unating<br><span>East-Bajac Bajac Olongapo City</span><span class="pending badge"></span></a>
-    <a  class="collection-item">Rainier De Vera<br><span>New Cabalan Olongapo City</span><span class="pending badge"></span></a>
-    <a  class="collection-item"><span>Gerald Austria</span><br><span>Sta. Rita Olongapo City</span><span class="pending badge"></span></a>
+    <a ng-repeat="w in delivers" class="collection-item">{{w.p_id}}<br><span>{{w.m_id}}</span><span data-ng-click="setDeliver(w.pr_id)" ng-if="w.p_type==0" class="pending badge"></span>
+    <span ng-if="w.p_type==1" class="delivered badge"></span></a>
   </div>
 
 <div class="footer" style="position:fixed;bottom:0px;width:100%;">

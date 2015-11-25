@@ -7,11 +7,11 @@ app.controller("CheckoutController",function($rootScope,$scope,$location){
 			myjson[i].myaddress = "sdfdsfdsfds";
 		}
 
-		$.post( 'http://iligtas.ph/smartd/json_cart.php',{ mycart: myjson }, function( data, status) {
+		/*$.post( 'http://iligtas.ph/smartd/json_cart.php',{ mycart: myjson }, function( data, status) {
 	      //$( "#id01" ).html( data[0].Name );
 	      localStorage.removeItem("product");
 	      $('#modal1').openModal();
-	    });
+	    });*/
 
 	}
 
